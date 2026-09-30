@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oba's Estates</title>
+  <meta name="description" content="Oba's Estates — a private brokerage for significant homes in Lagos and Abuja.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="site-shell">
+
+<header class="site-nav">
+  <div class="container py-2">
+    <div class="d-flex align-items-center justify-content-between gap-3">
+      <a href="index.html" class="d-flex align-items-center gap-2 text-reset">
+        <svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="1.4" y="1.4" width="29.2" height="29.2" stroke="currentColor" stroke-width="1.3"/><path d="M8 22.5V12.2L16 7.8l8 4.4v10.3" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="M12.2 22.5v-6.2h7.6v6.2" stroke="currentColor" stroke-width="1.3"/></svg>
+        <span class="brand-word">Oba<span>'s</span> Estates</span>
+      </a>
+      <nav class="d-none d-lg-flex align-items-center gap-1" aria-label="Primary">
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link " href="listings.html">Listings</a>
+        <a class="nav-link " href="services.html">Services</a>
+        <a class="nav-link " href="about.html">The House</a>
+        <a class="nav-link " href="contact.html">Contact</a>
+      </nav>
+      <div class="d-flex align-items-center gap-2">
+        <a href="saved.html" class="icon-btn" aria-label="Saved homes"><i class="bi bi-heart"></i></a>
+        <a href="contact.html" class="nav-cta d-none d-md-inline-flex">Enquire</a>
+        <button class="icon-btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu" aria-label="Open menu"><i class="bi bi-list"></i></button>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="menu">
+  <div class="offcanvas-header">
+    <span class="brand-word">Menu</span>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column gap-2">
+    <a href="index.html">Home</a>
+    <a href="listings.html">Listings</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">The House</a>
+    <a href="saved.html">Saved homes</a>
+    <a class="btn btn-ink" href="contact.html">Enquire</a>
+  </div>
+</div>
+
+<main>
+
+<section class="hero">
+  <div class="hero-media">
+    <img src="images/hero-waterfront.jpg" alt="Waterfront villa at golden hour">
+    <div class="hero-shade"></div>
+  </div>
+  <div class="container hero-copy">
+    <p class="eyebrow">Est. 1998 · Lagos & Abuja</p>
+    <h1>Homes of quiet consequence.</h1>
+    <p class="hero-lead">Oba's Estates places private houses — on the lagoon, behind high walls, above the avenue — for families who prefer not to be found on a portal.</p>
+    <div class="d-flex flex-column flex-sm-row flex-wrap gap-2 mt-4">
+      <a class="btn btn-ink" href="listings.html">Browse the collection</a>
+      <a class="btn btn-light-line" href="contact.html">Speak to the desk</a>
+    </div>
+  </div>
+</section>
+<div class="container">
+<form class="search-panel" data-search>
+  <div class="row g-3 align-items-end">
+    <div class="col-md-3"><label for="q">Search</label><input id="q" name="q" class="form-control" placeholder="Island, Ikoyi, villa…"></div>
+    <div class="col-6 col-md-2"><label for="city">City</label><select id="city" name="city" class="form-select"><option value="">All</option><option>Lagos</option><option>Abuja</option></select></div>
+    <div class="col-6 col-md-2"><label for="type">Type</label><select id="type" name="type" class="form-select"><option value="">All</option><option>Villa</option><option>Mansion</option><option>Penthouse</option><option>Residence</option><option>Apartment</option></select></div>
+    <div class="col-6 col-md-2"><label for="status">Intent</label><select id="status" name="status" class="form-select"><option value="">Buy or let</option><option value="sale">For sale</option><option value="let">To let</option></select></div>
+    <div class="col-6 col-md-3"><button class="btn btn-ink w-100" type="submit">View homes</button></div>
+  </div>
+</form>
+</div>
+<section class="section">
+  <div class="container">
+    <div class="row align-items-end mb-4">
+      <div class="col-lg-8">
+        <p class="section-kicker">Private collection</p>
+        <h2>Houses currently shown</h2>
+        <p class="muted mb-0" style="max-width:46ch">A short list. Some homes are offered only after a conversation; others can be viewed this week.</p>
+      </div>
+      <div class="col-lg-4 text-lg-end mt-3 mt-lg-0"><a class="btn btn-ghost" href="listings.html">All listings</a></div>
+    </div>
+    <div class="row g-4" data-featured></div>
+  </div>
+</section>
+<section class="section pt-0">
+  <div class="container">
+    <div class="stat-grid">
+      <div><span class="num">27</span><span class="muted">years of private sales</span></div>
+      <div><span class="num">2</span><span class="muted">desks, Lagos and Abuja</span></div>
+      <div><span class="num">140</span><span class="muted">homes placed last decade</span></div>
+      <div><span class="num">1</span><span class="muted">advisor per instruction</span></div>
+    </div>
+  </div>
+</section>
+<section class="section about-band">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6"><div class="split-image"><img src="images/living.jpg" alt="Reception room with garden light"></div></div>
+      <div class="col-lg-6">
+        <p class="section-kicker">The house</p>
+        <h2>We do not shout. We introduce.</h2>
+        <p>Oba's Estates was founded to represent owners who want a sale conducted with the same discretion as the house itself.</p>
+        <p class="mb-4">Buyers are received by appointment in Ikoyi or Maitama. Off-market homes are never listed in full.</p>
+        <a class="btn btn-light-line" href="about.html">Our way of working</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <p class="section-kicker">Neighbourhoods</p>
+    <h2 class="mb-4">Where we keep a book</h2>
+    <div class="row g-3">
+      <div class="col-md-6 col-xl-3"><a class="place-tile" href="listings.html?q=Banana%20Island"><img src="images/hero-waterfront.jpg" alt=""><div class="shade"></div><div class="copy"><div class="small text-uppercase" style="letter-spacing:.14em">Lagoon villas</div><strong style="font-family:var(--font-display);font-size:1.6rem;font-weight:500">Banana Island</strong></div></a></div>
+      <div class="col-md-6 col-xl-3"><a class="place-tile" href="listings.html?q=Ikoyi"><img src="images/mansion-dusk.jpg" alt=""><div class="shade"></div><div class="copy"><div class="small text-uppercase" style="letter-spacing:.14em">Garden mansions</div><strong style="font-family:var(--font-display);font-size:1.6rem;font-weight:500">Ikoyi</strong></div></a></div>
+      <div class="col-md-6 col-xl-3"><a class="place-tile" href="listings.html?q=Victoria%20Island"><img src="images/penthouse.jpg" alt=""><div class="shade"></div><div class="copy"><div class="small text-uppercase" style="letter-spacing:.14em">Sky residences</div><strong style="font-family:var(--font-display);font-size:1.6rem;font-weight:500">Victoria Island</strong></div></a></div>
+      <div class="col-md-6 col-xl-3"><a class="place-tile" href="listings.html?q=Maitama"><img src="images/aerial-estate.jpg" alt=""><div class="shade"></div><div class="copy"><div class="small text-uppercase" style="letter-spacing:.14em">Diplomatic plots</div><strong style="font-family:var(--font-display);font-size:1.6rem;font-weight:500">Maitama</strong></div></a></div>
+    </div>
+  </div>
+</section>
+<section class="section pt-0">
+  <div class="container">
+    <p class="section-kicker">Letters</p>
+    <h2 class="mb-4">What clients say, quietly</h2>
+    <div class="row g-4">
+      <div class="col-md-4"><blockquote class="quote-card mb-0"><p>“They found the house before it was spoken about.”</p><footer class="muted small">Private owner, Banana Island</footer></blockquote></div>
+      <div class="col-md-4"><blockquote class="quote-card mb-0"><p>“The viewing was at dusk, as we asked. No crowd, no cameras.”</p><footer class="muted small">Family relocation, Maitama</footer></blockquote></div>
+      <div class="col-md-4"><blockquote class="quote-card mb-0"><p>“A let that felt like a house, not a product.”</p><footer class="muted small">Corporate posting, Ikoyi</footer></blockquote></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="row g-4 pb-4">
+      <div class="col-lg-4">
+        <p class="brand-word mb-3">Oba's Estates</p>
+        <p class="mb-0" style="max-width:32ch">A private brokerage for significant homes in Lagos and Abuja. We work quietly, and only by introduction or appointment.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h3 class="h6 text-uppercase" style="letter-spacing:.16em;font-family:var(--font-body)">House</h3>
+        <ul class="list-unstyled mb-0">
+          <li class="mb-2"><a href="listings.html">Listings</a></li>
+          <li class="mb-2"><a href="services.html">Services</a></li>
+          <li class="mb-2"><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h3 class="h6 text-uppercase" style="letter-spacing:.16em;font-family:var(--font-body)">Lagos</h3>
+        <p class="mb-1">12 Bourdillon Road</p>
+        <p class="mb-1">Ikoyi, Lagos</p>
+        <p class="mb-0">+234 1 463 2200</p>
+      </div>
+      <div class="col-lg-3">
+        <h3 class="h6 text-uppercase" style="letter-spacing:.16em;font-family:var(--font-body)">Abuja</h3>
+        <p class="mb-1">14 Mississippi Street</p>
+        <p class="mb-1">Maitama, Abuja</p>
+        <p class="mb-0">enquiries@obasestates.com</p>
+      </div>
+    </div>
+    <hr class="rule" style="background:rgba(250,246,239,.14)">
+    <div class="d-flex flex-column flex-md-row justify-content-between gap-2 pt-3 small">
+      <span>© 2026 Oba's Estates. All rights reserved.</span>
+      <span>Private sales · Lettings · Off-market</span>
+    </div>
+  </div>
+</footer>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/properties.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
